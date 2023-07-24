@@ -1,6 +1,6 @@
-package java_day4;
+package java_day4.quiz;
 
-public class Java_my_info {
+public class Java_3고객정보 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
