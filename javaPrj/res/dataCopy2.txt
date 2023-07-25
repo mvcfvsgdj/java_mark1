@@ -1,1 +1,1 @@
-fout.write
+abcdefghij2133123
