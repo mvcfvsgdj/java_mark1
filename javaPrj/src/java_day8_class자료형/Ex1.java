@@ -45,7 +45,7 @@ public class Ex1 {
 				break loop;			
 				
 				default:
-					System.out.println("😛");
+					System.out.println("error");
 				 }			
 			}
 	
