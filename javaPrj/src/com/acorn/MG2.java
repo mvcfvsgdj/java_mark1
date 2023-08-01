@@ -1,13 +1,14 @@
 package com.acorn;
 
 
-public class MG {
+public class MG2 {
 
 	public static int[] getYak(int num) {
 		// TODO Auto-generated method stub
-
+		
+		
        
-        int[] yak = new int[20];
+        int[] yak = new int[20];  // type의 기본형, 0으로 초기화
  
         int cnt = 0; // 배열시작 0...19
         for (int i = 1; i <= num; i++) {   //   i:  12  => 12/1  ~12/12   
@@ -17,7 +18,14 @@ public class MG {
             }
         }
          
-        return yak;
+        // 약수개수만큼 배열생성
+        
+        int[] result_yak = new int[cnt];
+        System.arraycopy(yak, 0, result_yak,0 , cnt);
+        
+        
+        
+        return result_yak;
         
 
         
