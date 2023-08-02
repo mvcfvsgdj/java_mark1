@@ -7,5 +7,7 @@ public class A {
 	}
 	public static void 메서드2() {
 		System.out.println("메서드1동작");
+
 	}
+
 }

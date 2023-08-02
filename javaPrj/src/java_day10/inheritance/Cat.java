@@ -9,7 +9,7 @@ public class Cat extends Animal{
 	
 	//부모의매서드를 재정의
 	//오버라이드
-		
+	//부모의 매서드를 재정의 할때 입력,반환 정보가 같아야함
 
 	}
 	public void 짖는다() {
