@@ -5,34 +5,36 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Area {
-	String Path;
-	int Seat;
-	char[] Concert;
+	String Path; //파일 저장 경로
+	int Seat; //최대 좌석수 
+	char[] Concert; //좌석 예매내역
 	
+	//기본 생성자
 	public Area() {
 	}
 	
-	public Area(String path, int seat) {
+	public Area(String path, int seat) { //파일 경로, 좌석수 받음 
 		super();
-		this.Path = path;
-		this.Seat = seat;
-		this.Concert = new char[seat];
+		this.Path = path; //파일 경로
+		this.Seat = seat; //최대 좌석수
+		this.Concert = new char[seat]; //최대 좌석수 만큼 배열 생성
 	}
 	
 	public void ConcertState() {
-		//파일에서 문자 단위로 읽기
+		//파일에서 한문자씩 읽어옴
 		try {
+			//해당 경로의 파일을 읽도록 설정
 			FileReader fis = new FileReader(this.Path);
+			
+			//최대좌석수만큼 한문자씩 읽어옴
 			for(int i = 0; i<this.Seat; i++) {
 				int data = fis.read();
 				this.Concert[i] = (char)data;
-				//System.out.print(this.Concert[i]);
+				//파일을 한문자씩 읽어서 배열에 저장
 			}
-		} catch (FileNotFoundException e) {
-	
+		} catch (FileNotFoundException e) { //파일이 존재하지 않을 때
 			e.printStackTrace();
 		} catch (IOException e) {
-		
 			e.printStackTrace();
 		}
 	}

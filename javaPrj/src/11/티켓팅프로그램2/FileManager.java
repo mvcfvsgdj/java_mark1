@@ -1,4 +1,4 @@
-package 티켓팅프로그램;
+package 티켓팅프로그램2;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -28,14 +28,14 @@ public class FileManager{
 		try {
 			File file = new File(Sector.Path);
 			boolean result = file.createNewFile();
-			//파일을 만들고 성공유무를 result에 저장
 			if (result) {
 				System.out.println("파일 생성 성공");
-				FileWriter w = new FileWriter(Sector.Path); //해당경로에 파일을 씀
+
+				FileWriter w = new FileWriter(Sector.Path);
 				for (int i = 0; i < Sector.Seat; i++) {
-					w.write("□"); 
-				}//초기 상태 힙영역에 저장
-				w.flush();//파일에 넣어줌
+					w.write("□"); // heap 영역에저장 
+				}
+				w.flush(); //heap 영역에 저장된 
 			} else {
 				//System.out.println("\n파일이 이미 존재합니다.");
 			}
